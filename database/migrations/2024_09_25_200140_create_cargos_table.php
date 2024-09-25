@@ -6,24 +6,20 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCargosTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('cargos', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->string('identificacion')->unique();
+            $table->string('area');
+            $table->string('cargo');
+            $table->string('rol');
+            $table->foreignId('jefe_id')->nullable()->constrained('empleados');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('cargos');

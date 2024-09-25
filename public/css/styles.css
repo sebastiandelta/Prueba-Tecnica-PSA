@@ -1,0 +1,14 @@
+/* public/css/styles.css */
+body {
+    height: 100vh; /* Hacer que el cuerpo ocupe toda la altura de la ventana */
+    margin: 0;
+}
+
+.sidebar {
+    height: 100%; /* Hacer que el sidebar ocupe el 100% de la altura */
+    position: fixed; /* Fijar el sidebar en la posición */
+}
+
+main {
+    margin-left: 200px; /* Dejar espacio para el sidebar */
+}
